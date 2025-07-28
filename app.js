@@ -7,16 +7,16 @@ function get(id) {
 // Arreglo para almacenar los nombres de los amigos
 let nombres = [];
 
-// Función para agregar un nombre a la lista
+// Funcion para agregar nombres a la lista
 function agregarAmigo() {
   const input = get("amigo");
   const nombre = input.value.trim();
 
   if (nombre === "") {
-    alert("Por favor, escribe un nombre.");
+    alert("Por favor, ingrese un nombre valido.");
     return;
   }
-  //aseguramos que solo letras puedan digitar
+  //solo letras puedan digitar
   if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre)) {
     alert("Solo se permiten letras.");
     return;
@@ -27,7 +27,7 @@ function agregarAmigo() {
   actualizarLista();
 }
 
-// Función para mpostrar el arreglo con los nombres
+// Funcion para mostrar el arreglo con los nombres
 function actualizarLista() {
   const lista = get("listaAmigos");
   lista.innerHTML = "";
@@ -41,7 +41,7 @@ function actualizarLista() {
   }
 }
 
-// Función para sortear un amigo secreto
+// Funcion para sortear un amigo secreto
 function sortearAmigo() {
   const lista = get("listaAmigos");
   const resultado = get("resultado");
